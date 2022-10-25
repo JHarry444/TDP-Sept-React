@@ -17,6 +17,9 @@ import ParamsExample from './Components/Routing/ParamsExample';
 import People from './Components/Static-Data/People';
 import FilmDetails from './Components/Routing/FilmDetails';
 import Testing from './Testing';
+import Hack from './Components/Hackathon/Hack';
+import Create from './Components/Hackathon/Create';
+import Read from './Components/Hackathon/Read';
 
 function App() {
   return (
@@ -60,6 +63,11 @@ function App() {
                   Testing
                 </Link>
               </Col>
+              <Col>
+                <Link className="nav-link" to="/hack">
+                  Hack
+                </Link>
+              </Col>
               <Col lg={3}>
                 <Navigation />
               </Col>
@@ -81,6 +89,10 @@ function App() {
             <Route path="ex1" element={<Converter />} />
             <Route path="ex2" element={<Counter />} />
             <Route path="ex3" element={<OMDB />} />
+          </Route>
+          <Route path="hack" element={<Hack />}>
+            <Route path="create" element={<Create />} />
+            <Route path="read" element={<Read />} />
           </Route>
 
         </Routes>
